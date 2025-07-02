@@ -21,12 +21,22 @@ package Training.Training_04;
  * 프로그램을 종료합니다.
  */
 
+import java.util.Random;
+
 /**
  * Training 4
  */
 public class CT01Training_04 {
 	/** 초기화 */
 	public static void start(String[] args) {
-		// Do Something
+		/*
+		 * Random 클래스란?
+		 * - 난수를 생성하기 위한 다양한 기능을 제공하는 클래스를 의미한다. (+ 즉, Random 클래스를 활용하면
+		 * 프로그램이 실행 될 때마다 다른 결과를 출력하도록 명령문을 작성하는 것이 가능하다.)
+		 */
+		Random oRandom = new Random();
+		int nAnswer = oRandom.nextInt(1, 100);
+		
+		System.out.printf("정답 : %d\n\n", nAnswer);
 	}
 }
