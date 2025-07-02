@@ -74,8 +74,17 @@ import java.util.Scanner;
 public class CE01Example_03 {
 	/** 초기화 */
 	public static void start(String[] args) {
+		int nVal_Bin = 0b10;
+		int nVal_Oct = 0010;
+		int nVal_Hex = 0x10;
+		
+		System.out.println("=====> 결과 - A <=====");
+		System.out.printf("2 진수 : %d\n", nVal_Bin);
+		System.out.printf("8 진수 : %d\n", nVal_Oct);
+		System.out.printf("16 진수 : %d\n", nVal_Hex);
+		
 		Scanner oScanner = new Scanner(System.in);
-		System.out.print("정수 입력 : ");
+		System.out.print("\n정수 입력 : ");
 		
 		/*
 		 * nextInt 메서드란?
@@ -85,7 +94,7 @@ public class CE01Example_03 {
 		 */
 		int nVal = oScanner.nextInt();
 		
-		System.out.println("\n=====> 결과 <=====");
+		System.out.println("\n=====> 결과 - B <=====");
 		
 		/*
 		 * Integer.toString 메서드란?

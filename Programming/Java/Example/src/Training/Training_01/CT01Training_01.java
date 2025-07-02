@@ -12,6 +12,9 @@ package Training.Training_01;
 public class CT01Training_01 {
 	/** 초기화 */
 	public static void start(String[] args) {
-		// Do Something
+		System.out.println("ABC");
+		System.out.printf("%s\n", "ABC");
+		System.out.printf("%c%c%c\n", 'A', 'B', 'C');
+		System.out.printf("%c%c%c\n", 65, 66, 67);
 	}
 }
