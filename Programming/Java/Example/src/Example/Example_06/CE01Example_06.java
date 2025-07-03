@@ -69,6 +69,8 @@ public class CE01Example_06 {
 		while(i < nTimes) {
 			// 짝수 일 경우
 			if((i + 1) % 2 == 0) {
+				i += 1;
+				
 				/*
 				 * continue 키워드란?
 				 * - 점프문 중 하나로서 프로그램의 현재 흐름을 생략하고 다음 흐름으로 이동 시키는 역할을

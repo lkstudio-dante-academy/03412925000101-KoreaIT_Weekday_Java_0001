@@ -22,6 +22,7 @@ package Training.Training_04;
  */
 
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * Training 4
@@ -35,8 +36,26 @@ public class CT01Training_04 {
 		 * 프로그램이 실행 될 때마다 다른 결과를 출력하도록 명령문을 작성하는 것이 가능하다.)
 		 */
 		Random oRandom = new Random();
-		int nAnswer = oRandom.nextInt(1, 100);
+		Scanner oScanner = new Scanner(System.in);
 		
+		int nAnswer = oRandom.nextInt(1, 100);
 		System.out.printf("정답 : %d\n\n", nAnswer);
+		
+		boolean bIsContinue = true;
+		
+		do {
+			System.out.print("정수 입력 : ");
+			int nVal = oScanner.nextInt();
+			
+			// 정답 일 경우
+			if(nVal == nAnswer) {
+				bIsContinue = false;
+			} else {
+				String oMsg = (nVal < nAnswer) ? "큽니다." : "작습니다.";
+				System.out.printf("정답은 %d 보다 %s\n\n", nVal, oMsg);
+			}
+		} while(bIsContinue);
+		
+		System.out.println("프로그램을 종료합니다.");
 	}
 }

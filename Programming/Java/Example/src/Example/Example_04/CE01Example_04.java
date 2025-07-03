@@ -81,7 +81,7 @@ public class CE01Example_04 {
 		
 		// 우항이 0 이 아닐 경우
 		if(nValB != 0) {
-			System.out.printf("%d / %d = %d\n", nValA, nValB, nValA / nValB);
+			System.out.printf("%d / %d = %f\n", nValA, nValB, nValA / (float)nValB);
 			System.out.printf("%d %% %d = %d\n", nValA, nValB, nValA % nValB);
 		}
 		
