@@ -13,6 +13,7 @@
  * Java 는 패키지 단위로 연관 된 기능이 그룹화되어있기 때문에 특정 패키지를 가져옴으로서
  * 해당 패키지 하위에 존재하는 여러 기능을 활용하는 것이 가능하다.
  */
+
 import Example.Example_01.CE01Example_01;
 import Example.Example_02.CE01Example_02;
 import Example.Example_03.CE01Example_03;
@@ -41,6 +42,8 @@ import Training.Training_09.CT01Training_09;
 import Training.Training_10.CT01Training_10;
 import Training.Training_11.CT01Training_11;
 import Training.Training_12.CT01Training_12;
+import Training.Training_13.CT01Training_13;
+import Training.Training_14.CT01Training_14;
 
 /*
  * 클래스 (Class) 란?
@@ -97,7 +100,7 @@ public class Main {
 //		CE01Example_10.start(args);
 //		CE01Example_11.start(args);
 //		CE01Example_12.start(args);
-		
+
 //		CP01Practice_01.start(args);
 //		CP01Practice_02.start(args);
 
@@ -110,8 +113,12 @@ public class Main {
 //		CT01Training_07.start(args);
 		CT01Training_08.start(args);
 //		CT01Training_09.start(args);
+//		CT01Training_10.start(args);
+//		CT01Training_09.start(args);
 // 		CT01Training_10.start(args);
 //		CT01Training_11.start(args);
 //		CT01Training_12.start(args);
+//		CT01Training_13.start(args);
+//		CT01Training_14.start(args);
 	}
 }

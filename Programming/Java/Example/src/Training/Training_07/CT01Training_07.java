@@ -2,18 +2,23 @@ package Training.Training_07;
 
 /*
  * Java 연습 문제 7
- * - 모든 조합 출력하기
- * - 물건이 3 개 있으며 각 물건의 가격은 서로 다르다 (+ Ex. 50 원, 250 원, 500 원)
- * - 소지 금액을 입력 받은 후 해당 금액을 모두 소비해서 구입 할 수 있는 물건의 조합을 모두 출력한다
+ * - 홀수/짝수 구분하기
+ * - 배열의 길이를 입력 받아 해당 길이만큼 배열을 생성한다
+ * - 사용자로부터 배열의 길이만큼 수를 입력 받는다
+ * - 입력 받은 수가 홀수 일 경우 배열의 왼쪽부터 채워나간다
+ * - 짝수 일 경우 배열의 오른쪽부터 채워나간다
  *
  * Ex)
- * 소지 금액 입력 : 1000
+ * 크기 입력 : 5
  *
- * =====> 구입 가능 조합 <=====
- * 물건 A x 0 개, 물건 B x 0 개, 물건 C x 2 개
- * 물건 A x 0 개, 물건 B x 2 개, 물건 C x 1 개
- * 물건 A x 5 개, 물건 B x 1 개, 물건 C x 1 개
- * ...이하 생략
+ * 1 번째 정수 입력 : 1
+ * 2 번째 정수 입력 : 2
+ * 3 번째 정수 입력 : 3
+ * 4 번째 정수 입력 : 4
+ * 5 번째 정수 입력 : 5
+ *
+ * =====> 배열 <=====
+ * 1, 3, 5, 4, 2
  */
 
 import java.util.Scanner;
@@ -26,35 +31,32 @@ public class CT01Training_07 {
 	public static void start(String[] args) {
 		Scanner oScanner = new Scanner(System.in);
 		
-		System.out.print("소지 금액 입력 : ");
-		int nAmount = oScanner.nextInt();
+		System.out.print("크기 입력 : ");
+		int nSize = oScanner.nextInt();
 		
-		for(int i = 0; i <= nAmount; i += PRICE_STUFF_A) {
-			for(int j = 0; j <= nAmount; j += PRICE_STUFF_B) {
-				for(int k = 0; k <= nAmount; k += PRICE_STUFF_C) {
-					// 조합이 불가능 할 경우
-					if(i + j + k != nAmount) {
-						continue;
-					}
-					
-					int nNumStuffsA = i / PRICE_STUFF_A;
-					int nNumStuffsB = j / PRICE_STUFF_B;
-					int nNumStuffsC = k / PRICE_STUFF_C;
-					
-					String oMsgA = String.format("물건 A x %d 개", nNumStuffsA);
-					String oMsgB = String.format("물건 B x %d 개", nNumStuffsB);
-					String oMsgC = String.format("물건 C x %d 개", nNumStuffsC);
-					
-					System.out.printf("%s, %s, %s\n", oMsgA, oMsgB, oMsgC);
-				}
+		int[] oValues = new int[nSize];
+		
+		int nPos_Odd = 0;
+		int nPos_Even = nSize - 1;
+		
+		for(int i = 0; i < oValues.length; ++i) {
+			System.out.printf("%d 번째 정수 입력 : ", i + 1);
+			int nVal = oScanner.nextInt();
+			
+			// 홀수 일 경우
+			if(nVal % 2 != 0) {
+				oValues[nPos_Odd++] = nVal;
+			} else {
+				oValues[nPos_Even--] = nVal;
 			}
 		}
+		
+		System.out.println("\n=====> 배열 <=====");
+		
+		for(int nVal : oValues) {
+			System.out.printf("%d, ", nVal);
+		}
+		
+		System.out.println();
 	}
-	
-	/**
-	 * 가격
-	 */
-	private static final int PRICE_STUFF_A = 50;
-	private static final int PRICE_STUFF_B = 250;
-	private static final int PRICE_STUFF_C = 500;
 }
