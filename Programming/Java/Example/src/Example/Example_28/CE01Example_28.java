@@ -104,7 +104,7 @@ public class CE01Example_28 {
 	
 	private static CCounter m_oCounter = new CCounter();
 	
-	/** 쓰레드 A 진입 함수 */
+	/** 쓰레드 A 진입 메서드 */
 	private static void main_ThreadA() {
 		for(int i = 0; i < 1000000; ++i) {
 			m_oCounter.incrCount(1);
@@ -112,7 +112,7 @@ public class CE01Example_28 {
 		}
 	}
 	
-	/** 쓰레드 B 진입 함수 */
+	/** 쓰레드 B 진입 메서드 */
 	private static void main_ThreadB() {
 		for(int i = 0; i < 1000000; ++i) {
 			m_oCounter.incrCount(1);
