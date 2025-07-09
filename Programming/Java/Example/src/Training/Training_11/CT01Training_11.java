@@ -1,33 +1,60 @@
 package Training.Training_11;
 
 /*
- * Java 연습 문제 9
- * - 바위/가위/보 게임 제작하기
- * - 사용자로부터 바위/가위/보 중 하나를 입력받는다
- * - 컴퓨터는 바위/가위/보 중 하나를 랜덤하게 선택한다
- * - 사용자가 이기거나 비겼을 경우 게임을 다시 진행한다
- * - 사용자가 패배했을 경우 전적 출력 후 게임을 종료한다
+ * Java 연습 문제 7
+ * - 모든 조합 출력하기
+ * - 물건이 3 개 있으며 각 물건의 가격은 서로 다르다 (+ Ex. 50 원, 250 원, 500 원)
+ * - 소지 금액을 입력 받은 후 해당 금액을 모두 소비해서 구입 할 수 있는 물건의 조합을 모두 출력한다
  *
  * Ex)
- * 정수 (1. 바위, 2. 가위, 3. 보) 입력 : 1
- * 결과 : 승리 (나 - 바위, 컴퓨터 - 가위)
+ * 소지 금액 입력 : 1000
  *
- * 정수 (1. 바위, 2. 가위, 3. 보) 입력 : 2
- * 결과 : 무승부 (나 - 가위, 컴퓨터 - 가위)
- *
- * 정수 (1. 바위, 2. 가위, 3. 보) 입력 : 3
- * 결과 : 패배 (나 - 보, 컴퓨터 - 가위)
- *
- * 전적 : 1 승 1 무 1 패
- * 프로그램을 종료합니다.
+ * =====> 구입 가능 조합 <=====
+ * 물건 A x 0 개, 물건 B x 0 개, 물건 C x 2 개
+ * 물건 A x 0 개, 물건 B x 2 개, 물건 C x 1 개
+ * 물건 A x 5 개, 물건 B x 1 개, 물건 C x 1 개
+ * ...이하 생략
  */
 
+import java.util.Scanner;
+
 /**
- * Training 9
+ * Training 7
  */
 public class CT01Training_11 {
 	/** 초기화 */
 	public static void start(String[] args) {
-		// Do Something
+		Scanner oScanner = new Scanner(System.in);
+		
+		System.out.print("소지 금액 입력 : ");
+		int nAmount = oScanner.nextInt();
+		
+		for(int i = 0; i <= nAmount; i += PRICE_STUFF_A) {
+			for(int j = 0; j <= nAmount; j += PRICE_STUFF_B) {
+				for(int k = 0; k <= nAmount; k += PRICE_STUFF_C) {
+					// 조합이 불가능 할 경우
+					if(i + j + k != nAmount) {
+						continue;
+					}
+					
+					int nNumStuffsA = i / PRICE_STUFF_A;
+					int nNumStuffsB = j / PRICE_STUFF_B;
+					int nNumStuffsC = k / PRICE_STUFF_C;
+					
+					String oMsgA = String.format("물건 A x %d 개", nNumStuffsA);
+					String oMsgB = String.format("물건 B x %d 개", nNumStuffsB);
+					String oMsgC = String.format("물건 C x %d 개", nNumStuffsC);
+					
+					System.out.printf("%s, %s, %s\n", oMsgA, oMsgB, oMsgC);
+				}
+			}
+		}
 	}
+	
+	/**
+	 * 가격
+	 */
+	private static final int PRICE_STUFF_A = 50;
+	private static final int PRICE_STUFF_B = 250;
+	private static final int PRICE_STUFF_C = 500;
 }
