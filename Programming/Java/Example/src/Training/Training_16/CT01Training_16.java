@@ -71,6 +71,14 @@ public class CT01Training_16 {
                     addMember(oManager, oScanner);
                     break;
 
+                case MENU_REMOVE_MEMBER:
+                    removeMember(oManager, oScanner);
+                    break;
+
+                case MENU_SEARCH_MEMBER:
+                    searchMember(oManager, oScanner);
+                    break;
+
                 case MENU_SHOW_MEMBERS_ALL:
                     showMembers_All(oManager);
                     break;
@@ -109,6 +117,40 @@ public class CT01Training_16 {
             System.out.printf("%s 을(를) 추가했습니다.", oName);
         } else {
             System.out.printf("%s 은(는) 이미 존재하는 회원입니다.", oName);
+        }
+    }
+
+    /** 회원을 제거한다 */
+    private static void removeMember(CManager_Member a_oManager,
+                                     Scanner a_oScanner) {
+        System.out.print("이름 입력 : ");
+        String oName = a_oScanner.nextLine();
+
+        int nResult = a_oManager.findMember_At(oName);
+
+        // 회원이 존재 할 경우
+        if(nResult >= 0) {
+            a_oManager.removeMember(oName);
+            System.out.printf("%s 을(를) 제거했습니다.", oName);
+        } else {
+            System.out.printf("%s 은(는) 존재하지않습니다.");
+        }
+    }
+
+    /** 회원을 검색한다 */
+    private static void searchMember(CManager_Member a_oManager,
+                                     Scanner a_oScanner) {
+        System.out.print("이름 입력 : ");
+        String oName = a_oScanner.nextLine();
+
+        int nResult = a_oManager.findMember_At(oName);
+
+        // 회원이 존재 할 경우
+        if(nResult >= 0) {
+            System.out.println("=====> 회원 정보 <=====");
+            a_oManager.searchMember(oName);
+        } else {
+            System.out.printf("%s 은(는) 존재하지않습니다.");
         }
     }
 

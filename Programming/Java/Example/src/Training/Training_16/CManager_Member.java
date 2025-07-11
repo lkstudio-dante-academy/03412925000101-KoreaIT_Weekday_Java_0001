@@ -29,12 +29,30 @@ public class CManager_Member {
 
     /** 회원을 제거한다 */
     public void removeMember(String a_oName) {
+        int nResult = this.findMember_At(a_oName);
 
+        // 제거가 불가능 할 경우
+        if(nResult < 0) {
+            return;
+        }
+
+        for(int i = nResult; i < m_nNumMembers - 1; ++i) {
+            m_oMembers[i] = m_oMembers[i + 1];
+        }
+
+        m_nNumMembers -= 1;
     }
 
     /** 회원을 검색한다 */
     public void searchMember(String a_oName) {
+        int nResult = this.findMember_At(a_oName);
 
+        // 검색이 불가능 할 경우
+        if(nResult < 0) {
+            return;
+        }
+
+        m_oMembers[nResult].showInfo();
     }
 
     /** 모든 회원을 출력한다 */
