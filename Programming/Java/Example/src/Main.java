@@ -13,7 +13,6 @@
  * Java 는 패키지 단위로 연관 된 기능이 그룹화되어있기 때문에 특정 패키지를 가져옴으로서
  * 해당 패키지 하위에 존재하는 여러 기능을 활용하는 것이 가능하다.
  */
-
 import Example.Example_01.CE01Example_01;
 import Example.Example_02.CE01Example_02;
 import Example.Example_03.CE01Example_03;
@@ -44,6 +43,7 @@ import Example.Example_26.CE01Example_26;
 import Example.Example_27.CE01Example_27;
 import Example.Example_28.CE01Example_28;
 import Example.Example_29.CE01Example_29;
+
 import Practice.Practice_01.CP01Practice_01;
 import Practice.Practice_02.CP01Practice_02;
 
@@ -61,6 +61,9 @@ import Training.Training_11.CT01Training_11;
 import Training.Training_12.CT01Training_12;
 import Training.Training_13.CT01Training_13;
 import Training.Training_14.CT01Training_14;
+import Training.Training_15.CT01Training_15;
+import Training.Training_16.CT01Training_16;
+import Training.Training_17.CT01Training_17;
 
 /*
  * 클래스 (Class) 란?
@@ -120,7 +123,7 @@ public class Main {
 //		CE01Example_13.start(args);
 //		CE01Example_14.start(args);
 //		CE01Example_15.start(args);
-		CE01Example_16.start(args);
+//		CE01Example_16.start(args);
 //		CE01Example_17.start(args);
 //		CE01Example_18.start(args);
 //		CE01Example_19.start(args);
@@ -154,5 +157,8 @@ public class Main {
 //		CT01Training_12.start(args);
 //		CT01Training_13.start(args);
 //		CT01Training_14.start(args);
+//		CT01Training_15.start(args);
+//		CT01Training_16.start(args);
+		CT01Training_17.start(args);
 	}
 }
