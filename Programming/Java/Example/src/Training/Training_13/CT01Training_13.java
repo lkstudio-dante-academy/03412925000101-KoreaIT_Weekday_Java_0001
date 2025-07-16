@@ -14,12 +14,56 @@ package Training.Training_13;
  * 13 12 11 10  9
  */
 
+import java.util.Scanner;
+
 /**
  * Training 10
  */
 public class CT01Training_13 {
 	/** 초기화 */
 	public static void start(String[] args) {
-		// Do Something
+		Scanner oScanner = new Scanner(System.in);
+		
+		System.out.print("크기 입력 : ");
+		int nSize = oScanner.nextInt();
+		
+		int[][] oMatrix = new int[nSize][nSize];
+		setupValues(oMatrix);
+		
+		for(int i = 0; i < oMatrix.length; ++i) {
+			for(int j = 0; j < oMatrix[i].length; ++j) {
+				System.out.printf("%4d", oMatrix[i][j]);
+			}
+			
+			System.out.println();
+		}
+	}
+	
+	/** 값을 설정한다 */
+	private static void setupValues(int[][] a_oMatrix) {
+		int i = 0;
+		int j = -1;
+		
+		int nTimes = a_oMatrix.length;
+		int nDirection = 1;
+		
+		int nVal = 0;
+		int nVal_Max = a_oMatrix.length * a_oMatrix[0].length;
+		
+		while(nVal < nVal_Max) {
+			for(int k = 0; k < nTimes; ++k) {
+				j += nDirection;
+				a_oMatrix[i][j] = ++nVal;
+			}
+			
+			nTimes -= 1;
+			
+			for(int k = 0; k < nTimes; ++k) {
+				i += nDirection;
+				a_oMatrix[i][j] = ++nVal;
+			}
+			
+			nDirection = -nDirection;
+		}
 	}
 }

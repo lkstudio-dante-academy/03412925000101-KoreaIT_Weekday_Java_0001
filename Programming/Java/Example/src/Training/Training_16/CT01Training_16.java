@@ -86,6 +86,8 @@ public class CT01Training_16 {
 
             System.out.println();
         } while(true);
+        
+        System.out.println("프로그램을 종료합니다.");
     }
 
     /** 메뉴를 출력한다 */
