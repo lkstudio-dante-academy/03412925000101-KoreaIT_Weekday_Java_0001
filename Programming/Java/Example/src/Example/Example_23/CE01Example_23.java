@@ -117,6 +117,12 @@ public class CE01Example_23 {
 		oOuterA.incrVal(10);
 		oOuterB.incrVal(20);
 		
+		System.out.println("=====> 외부 클래스 - A <=====");
+		oOuterA.showInfo();
+		
+		System.out.println("\n=====> 외부 클래스 - B <=====");
+		oOuterB.showInfo();
+		
 		/*
 		 * 아래와 같이 멤버 내부 클래스는 외부 클래스 객체 내부에 생성 된다는 것을 알 수 있다. (+ 즉,
 		 * 멤버 내부 클래스는 단독으로 생성이 불가능하다는 것을 의미한다.)
@@ -128,6 +134,15 @@ public class CE01Example_23 {
 		oInner_MemberA.incrVal(30);
 		oInner_MemberB.incrVal(40);
 		oInner_MemberC.incrVal(50);
+		
+		System.out.println("\n=====> 멤버 내부 클래스 - A <=====");
+		oInner_MemberA.showInfo();
+		
+		System.out.println("\n=====> 멤버 내부 클래스 - B <=====");
+		oInner_MemberB.showInfo();
+		
+		System.out.println("\n=====> 멤버 내부 클래스 - C <=====");
+		oInner_MemberC.showInfo();
 		
 		/*
 		 * 아래와 같이 지역 내부 클래스는 특정 지역에 정의 되어 있기 때문에 해당 클래스를 통해 생성 된 객체를
@@ -141,6 +156,15 @@ public class CE01Example_23 {
 		oInner_LocalB.incrVal(40);
 		oInner_LocalC.incrVal(50);
 		
+		System.out.println("\n=====> 지역 내부 클래스 - A <=====");
+		oInner_LocalA.showInfo();
+		
+		System.out.println("\n=====> 지역 내부 클래스 - B <=====");
+		oInner_LocalB.showInfo();
+		
+		System.out.println("\n=====> 지역 내부 클래스 - C <=====");
+		oInner_LocalC.showInfo();
+		
 		/*
 		 * 아래와 같이 익명 내부 클래스 또한 지역 내부 클래스와 마찬가지로 해당 클래스로 생성 된 객체를
 		 * 직접적으로 참조하는 것이 불가능하다. (+ 즉, 클래스 이름이 존재하지 않기 때문에 직접적인 참조가
@@ -153,30 +177,6 @@ public class CE01Example_23 {
 		oInner_AnonymousA.incrVal(30);
 		oInner_AnonymousB.incrVal(40);
 		oInner_AnonymousC.incrVal(50);
-		
-		System.out.println("=====> 외부 클래스 - A <=====");
-		oOuterA.showInfo();
-		
-		System.out.println("\n=====> 외부 클래스 - B <=====");
-		oOuterB.showInfo();
-		
-		System.out.println("\n=====> 멤버 내부 클래스 - A <=====");
-		oInner_MemberA.showInfo();
-		
-		System.out.println("\n=====> 멤버 내부 클래스 - B <=====");
-		oInner_MemberB.showInfo();
-		
-		System.out.println("\n=====> 멤버 내부 클래스 - C <=====");
-		oInner_MemberC.showInfo();
-		
-		System.out.println("\n=====> 지역 내부 클래스 - A <=====");
-		oInner_LocalA.showInfo();
-		
-		System.out.println("\n=====> 지역 내부 클래스 - B <=====");
-		oInner_LocalB.showInfo();
-		
-		System.out.println("\n=====> 지역 내부 클래스 - C <=====");
-		oInner_LocalC.showInfo();
 		
 		System.out.println("\n=====> 익명 내부 클래스 - A <=====");
 		oInner_AnonymousA.showInfo();

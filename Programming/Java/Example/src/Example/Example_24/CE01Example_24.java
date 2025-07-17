@@ -82,6 +82,9 @@ public class CE01Example_24 {
 			}
 		});
 		
+		System.out.println("\n=====> 리스트 - 오름 차순 정렬 후 <=====");
+		printValues(oListValues);
+		
 		sortValues(oListValues, (a_nLhs, a_nRhs) -> {
 			return a_nRhs - a_nLhs;
 		});

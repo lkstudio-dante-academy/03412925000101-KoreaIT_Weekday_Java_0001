@@ -66,6 +66,7 @@ import Training.Training_17.CT01Training_17;
 import Training.Training_18.CT01Training_18;
 import Training.Training_19.CT01Training_19;
 import Training.Training_20.CT01Training_20;
+import Training.Training_21.CT01Training_21;
 
 /*
  * 클래스 (Class) 란?
@@ -134,7 +135,7 @@ public class Main {
 //		CE01Example_22.start(args);
 //		CE01Example_23.start(args);
 //		CE01Example_24.start(args);
-//		CE01Example_25.start(args);
+		CE01Example_25.start(args);
 //		CE01Example_26.start(args);
 //		CE01Example_27.start(args);
 //		CE01Example_28.start(args);
@@ -164,6 +165,7 @@ public class Main {
 //		CT01Training_17.start(args);
 //		CT01Training_18.start(args);
 //		CT01Training_19.start(args);
-		CT01Training_20.start(args);
+//		CT01Training_20.start(args);
+//		CT01Training_21.start(args);
 	}
 }

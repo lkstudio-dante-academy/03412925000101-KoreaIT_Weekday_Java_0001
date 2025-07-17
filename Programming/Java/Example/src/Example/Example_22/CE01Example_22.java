@@ -41,6 +41,12 @@ public class CE01Example_22 {
 		oOuterA.incrVal(10);
 		oOuterB.incrVal(20);
 		
+		System.out.println("=====> 외부 클래스 - A <=====");
+		oOuterA.showInfo();
+		
+		System.out.println("\n=====> 외부 클래스 - B <=====");
+		oOuterB.showInfo();
+		
 		/*
 		 * 아래와 같이 정적 중첩 클래스는 외부 클래스 내부에 정의 되었기 때문에
 		 * 해당 클래스에 접근하기 위해서는 외부 클래스 이름을 명시해야한다는 것을 알 수 있다.
@@ -50,12 +56,6 @@ public class CE01Example_22 {
 		
 		oNestedA.incrVal(30);
 		oNestedB.incrVal(40);
-		
-		System.out.println("=====> 외부 클래스 - A <=====");
-		oOuterA.showInfo();
-		
-		System.out.println("\n=====> 외부 클래스 - B <=====");
-		oOuterB.showInfo();
 		
 		System.out.println("\n=====> 내부 클래스 - A <=====");
 		oNestedA.showInfo();
