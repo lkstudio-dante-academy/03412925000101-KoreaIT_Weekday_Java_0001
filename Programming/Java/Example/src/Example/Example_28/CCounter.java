@@ -12,7 +12,7 @@ public class CCounter {
 	}
 	
 	/** 카운트를 증가 시킨다 */
-	public void incrCount(int a_nCount) {
+	public synchronized void incrCount(int a_nCount) {
 		m_nCount += a_nCount;
 	}
 }
