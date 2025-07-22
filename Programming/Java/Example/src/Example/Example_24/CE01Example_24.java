@@ -94,8 +94,7 @@ public class CE01Example_24 {
 	}
 	
 	/** 값을 정렬한다 */
-	private static void sortValues(List<Integer> a_oListValues,
-								   ICompare a_oCompare) {
+	private static void sortValues(List<Integer> a_oListValues, ICompare a_oCompare) {
 		for(int i = 0; i < a_oListValues.size(); ++i) {
 			int nIdx_Compare = i;
 			
